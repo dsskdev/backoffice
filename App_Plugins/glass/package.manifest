@@ -1,0 +1,15 @@
+{
+    propertyEditors:
+    [   
+        {
+            name: "Glass editor",
+            alias: "my.glass.editor",
+            editor:{
+                view: "~/app_plugins/glass/editor.html"
+            }
+        }
+    ],
+    javascript:[
+        "~/app_plugins/glass/editor.controller.js"
+    ]
+}

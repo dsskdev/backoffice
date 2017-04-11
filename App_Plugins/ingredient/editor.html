@@ -1,0 +1,26 @@
+<div ng-controller="My.IngredientController">
+    <table>
+        <tr ng-repeat="ingredient in model.value">
+            <td>
+                <input type="text" ng-model="ingredient.quantity" />
+            </td>
+            <td>
+                {{ingredient.name}}
+            </td>
+            <td>
+                <a href ng-click="remove($index)">Remove</a>
+            </td>
+        </tr>
+    </table>
+
+    <input type="text" 
+    ng-keyup="find($event, searchTerm)" 
+    ng-model="searchTerm" />
+    <ul>
+        <li ng-repeat="ingredient in ingredients.data">
+            <a ng-click="select(ingredient)">
+                {{ingredient.name}}
+            </a>
+        </li>
+    </ul>
+</div>
