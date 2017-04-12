@@ -1,13 +1,16 @@
 {
-    propertyEditors:
-    [   
+    propertyEditors:[   
         {
             name: "Glass editor",
             alias: "my.glass.editor",
+            isParameterEditor: true,
             editor:{
                 view: "~/app_plugins/glass/editor.html"
             }
         }
+    ],
+    css:[
+        "~/app_plugins/glass/style.css"
     ],
     javascript:[
         "~/app_plugins/glass/editor.controller.js"

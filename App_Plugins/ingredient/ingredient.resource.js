@@ -13,11 +13,15 @@ angular.module("umbraco.resources")
 	};
 
 	myService.getById = function(id){
-		return $http.get("Backoffice/Ingredient/IngredientApi/getById?id" + id);		
+		return $http.get("Backoffice/Ingredient/IngredientApi/getById?id=" + id);		
 	};
 
 	myService.save = function(ingredient){
 		return $http.post("Backoffice/ingredient/IngredientApi/PostSave", ingredient);
+	};
+
+	myService.delete = function(id){
+		return $http.delete("Backoffice/ingredient/IngredientApi/DeleteById?id=" + id);
 	};
 
 	return myService;
